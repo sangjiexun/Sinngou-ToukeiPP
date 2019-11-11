@@ -1,4 +1,4 @@
-# -PP
+# Sinngou-ToukeiPP
 Pythonバージョン:Python3.7
 
 使用ライブラリ:numpy,scipy,matplotlib
