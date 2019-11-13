@@ -2,7 +2,7 @@
 
 from numpy import *
 from matplotlib.pyplot import *
-fileName = 'weightHeightData.csv'
+fileName = 'Data/weightHeightData.csv'
 sampleData = loadtxt(fileName,delimiter=',') 
 X = sampleData[:,(0,1)]
 y = sampleData[:,2]
