@@ -1,7 +1,7 @@
 # Library
-
 from numpy import *
 from matplotlib.pyplot import *
+
 fileName = 'Data/weightHeightData.csv'
 sampleData = loadtxt(fileName,delimiter=',') 
 X = sampleData[:,(0,1)]
