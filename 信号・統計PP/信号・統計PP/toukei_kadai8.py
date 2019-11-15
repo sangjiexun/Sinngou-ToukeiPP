@@ -1,35 +1,35 @@
 # Library
-
 from numpy import *
 from matplotlib.pyplot import *
-from svm import *
-#from sklearn.svm import SVC
+from sklearn.svm import *
+
 fileName = 'Data/weightHeightData.csv'
 sampleData = loadtxt(fileName,delimiter=',') 
-x = sampleData[:,(0,1)]
+X = sampleData[:,(0,1)]
 y = sampleData[:,2]
-svm = SVC(gamma='auto')
-#svm.fit(a[])
+xmin = min(X[:,(0)])
+xmax = max(X[:,(0)])
+x = linspace(xmin,xmax,1000)
 
-xmin = min(x[:,(0)])
-xmax = max(x[:,(0)])
-X = linspace(xmin,xmax,1000)
-#x2=ax1+b
-w0 = -37.0346
-w1 = 0.2776
-w2 = 0.1248
+#SVM
+svm = SVC(kernel = 'linear').fit(X, y)
+print(f'w = {svm.coef_},w0 = {svm.intercept_}')
+w0 = svm.intercept_
+w1 = svm.coef_[0,0]
+w2 = svm.coef_[0,1]
+
 a = -(w1/w2)
 b = -(w0/w2)
-Y = (a*X+b)
+Y = (a*x+b)
+
 # Graph
 figure(figsize=(6,6)) 
-
-plot(x[y==1,0],x[y==1,1],'bo',label = 'man') 
-plot(x[y==-1,0],x[y==-1,1],'rd',label = 'woman')
-plot(X,Y,label = 'x2=ax2+b')
+plot(X[y==1,0],X[y==1,1],'bo',label = 'man') 
+plot(X[y==-1,0],X[y==-1,1],'rd',label = 'woman')
+plot(x,Y,label = '$x_{2}=%.4fx_{1}+%.4f$'% (a,b))
 xlabel('Weight [kg]') 
 ylabel('Height [cm]')
-autoscale(enable=True,axis='x',tight=True)
 legend()
 grid()
 show()
+
