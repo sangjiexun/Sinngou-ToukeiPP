@@ -12,12 +12,15 @@ print(X)
 C = cov(X)
 w,A = eig(C)
 index = argsort(w)
-print(M)
 rindex = index[array(range(M-1,-1,-1))]
 w = w[rindex] # 降順に並べ替え
 A = A[:,rindex] # 降順に並べ替え
 Z = dot(A[:,0].T,X) # 第１主成分
 print('Z=',Z)
 x = linspace(0,0,10)
-plot(Z,x,'.')
+n = arange(1,10)
+title('First main component')
+for Z_,x_,n_ in zip(Z,x,n):
+	plot(Z_,x_,'o',color='b')
+	annotate(n_,xy=(Z_,x_))
 show()
