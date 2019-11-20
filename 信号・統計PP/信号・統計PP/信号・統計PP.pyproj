@@ -40,6 +40,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="sinngou_kadai8.py" />
+    <Compile Include="sinngou_kadai9.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="toukei_kadai6.py">
       <SubType>Code</SubType>
     </Compile>
