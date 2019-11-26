@@ -3,10 +3,10 @@ from matplotlib.pyplot import *
 
 n = linspace(-2,5,8)
 x = array([0,0,3,2,1,0,0,0])
-#(x1,x2)遅延+
+#(x1,x2)遅延
 x1 = roll(x,-1)
 x2 = roll(x,-2)
-#(X1,X2)遅延-
+#(X1,X2)進相
 X1 = roll(x,1)
 X2 = roll(x,2)
 
