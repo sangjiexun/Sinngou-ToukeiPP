@@ -5,8 +5,7 @@
     <ProjectGuid>a8e67bc8-fdd3-4b27-893f-8907f3226395</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>
-    </StartupFile>
+    <StartupFile>sinngou_kadai10.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
