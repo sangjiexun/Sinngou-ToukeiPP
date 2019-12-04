@@ -5,7 +5,8 @@
     <ProjectGuid>a8e67bc8-fdd3-4b27-893f-8907f3226395</ProjectGuid>
     <ProjectHome>
     </ProjectHome>
-    <StartupFile>sinngou_kadai10.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -23,6 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="sinngou_kadai10.py" />
+    <Compile Include="sinngou_kadai11.py" />
     <Compile Include="sinngou_kadai6.py">
       <SubType>Code</SubType>
     </Compile>
